@@ -1,0 +1,36 @@
+.details:hover .summary+div {
+    display: flex;
+}
+
+.details:hover .summary>.active-vector {
+    animation: rotation .15s linear forwards;
+}
+
+.details-container:hover>.details:not(:hover),
+.details-container:hover .summary-link:not(:hover) {
+    color: #8E8E8E !important;
+}
+
+.details-container:hover>.details:not(:hover) .inactive-vector {
+    display: flex !important;
+}
+
+.details-container:hover>.details:not(:hover) .active-vector {
+    display: none !important;
+}
+
+.details-container .summary-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width:1024px) {
+    .details-container .summary-link:hover {
+        color: white;
+    }
+}
+
+@keyframes rotation {
+    100% {
+        transform: rotate(180deg);
+    }
+}
